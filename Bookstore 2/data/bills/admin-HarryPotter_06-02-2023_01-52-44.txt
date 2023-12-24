@@ -1,0 +1,6 @@
+User: admin
+Book Title: Harry Potter
+Copies Sold: 1
+Amount: 30.0$
+Profit: 10.0$
+Time of Transaction: 06-02-2023 01:52:44
