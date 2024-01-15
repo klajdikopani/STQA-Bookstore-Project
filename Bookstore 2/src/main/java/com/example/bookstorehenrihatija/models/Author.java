@@ -48,8 +48,8 @@ public class Author extends BaseModel implements Serializable {
     public String getFullName(){ return firstName + " " + lastName; };
 
     public Author(String firstName, String lastName){
-        setFirstName(firstName);
-        setLastName(lastName);;
+        this.firstName = firstName;
+        this.lastName = lastName;;
     }
     @Override
     public boolean SaveInFile() {
@@ -62,7 +62,7 @@ public class Author extends BaseModel implements Serializable {
 
     @Override
     public boolean isValid() {
-        return getFirstName().length() > 0 && getLastName().length() > 0;
+        return firstName.length() > 0 && lastName.length() > 0;
     }
 
     @Override
@@ -92,6 +92,7 @@ public class Author extends BaseModel implements Serializable {
             }catch (EOFException eofException){
                 System.out.println("End of author file reached!");
             }catch(IOException | ClassNotFoundException ex){
+                ex.printStackTrace();
                 System.out.println("No Authors");
             }
         }
