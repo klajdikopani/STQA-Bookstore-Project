@@ -20,6 +20,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Properties;
 
+
+//DO NOT USE THIS CLASS, USE AppLauncher instead
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -32,7 +34,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        System.out.println(BookOrder.getOrders().get(0));
         seedData();
         launch(args);
 

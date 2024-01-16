@@ -17,6 +17,7 @@ public class LoginController{
         addListener(view);
     }
     private void addListener(LoginView view){
+        view.getLoginBtn().setId("loginBtn");
         view.getLoginBtn().setOnAction(e -> {
             String password = view.getPasswordField().getText();
             String username = view.getUsernameField().getText();

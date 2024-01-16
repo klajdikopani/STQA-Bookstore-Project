@@ -1,0 +1,6 @@
+User: dummyUsername4
+Book Title: Dummy Title
+Copies Sold: 5
+Amount: 15000.0$
+Profit: 10000.0$
+Time of Transaction: 16-01-2024 08:34:05
