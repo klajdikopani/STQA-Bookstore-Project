@@ -67,6 +67,7 @@ public class ManagerController {
         });
         view.getSearchView().getClearBtn().setOnAction(e -> {
             view.getSearchView().getSearchField().setText("");
+            BookOrder.getOrders().sort(Comparator.comparing(BookOrder::getTimeCreated).reversed());
             view.getTableView().setItems(FXCollections.observableArrayList(BookOrder.getOrders()));
         });
     }
@@ -152,6 +153,9 @@ public class ManagerController {
         vBox.setSpacing(10);
         ArrayList<BookOrder> ordersSorted = BookOrder.getOrders();
         Collections.sort(ordersSorted, Collections.reverseOrder());
+//        if(ordersSorted.size() > 0){
+//            LocalDateTime currentDate = ordersSorted.get(0).getTimeCreated();
+//        }
         LocalDateTime currentDate = ordersSorted.get(0).getTimeCreated();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-yyyy");
         int count = 0;

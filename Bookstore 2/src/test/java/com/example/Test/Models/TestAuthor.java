@@ -2,7 +2,6 @@ package com.example.Test.Models;
 
 import com.example.bookstorehenrihatija.auxiliaries.Config;
 import com.example.bookstorehenrihatija.models.Author;
-import com.example.bookstorehenrihatija.models.Book;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.io.TempDir;
 

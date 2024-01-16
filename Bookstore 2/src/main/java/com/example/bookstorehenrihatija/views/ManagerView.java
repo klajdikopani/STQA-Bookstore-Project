@@ -49,6 +49,10 @@ public class ManagerView extends View{
     public SearchView getSearchView(){ return searchView; }
 
     public ManagerView(){
+        tableView.setId("managerTable");
+        searchView.getSearchField().setId("managerSearchField");
+        searchView.getSearchBtn().setId("managerSearchBtn");
+        searchView.getClearBtn().setId("managerClearBtn");
         new ManagerController(this);
         setTable();
         setStatistics();

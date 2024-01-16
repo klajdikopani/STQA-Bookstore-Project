@@ -19,21 +19,31 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class MainView extends View{
+    Tab authorTab;
+    Tab bookTab;
+    Tab librarianTab;
+    Tab managerTab;
+    Tab adminTab;
     @Override
     public Parent getView() {
         BorderPane borderPane = new BorderPane();
         TabPane tabPane = new TabPane();
-        Tab authorTab = new Tab("Authors");
+        authorTab = new Tab("Authors");
         authorTab.setContent(new AuthorView().getView());
-        Tab bookTab = new Tab("Books");
+        bookTab = new Tab("Books");
         BookView bookView = new BookView();
         bookTab.setContent(bookView.getView());
-        Tab librarianTab = new Tab("Librarian");
+        librarianTab = new Tab("Librarian");
         librarianTab.setContent(new LibrarianView(bookView).getView());
-        Tab managerTab = new Tab("Manager");
+        managerTab = new Tab("Manager");
         managerTab.setContent(new ManagerView().getView());
-        Tab adminTab = new Tab("Admin");
+        adminTab = new Tab("Admin");
         adminTab.setContent(new AdminView().getView());
+        authorTab.setId("authorTab");
+        bookTab.setId("bookTab");
+        librarianTab.setId("librarianTab");
+        managerTab.setId("managerTab");
+        adminTab.setId("adminTab");
         Role currentRole = (getCurrentUser() != null ? getCurrentUser().getRole() : null);
         if(currentRole != null){
             if(currentRole == Role.ADMIN)

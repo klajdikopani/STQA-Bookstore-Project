@@ -39,6 +39,10 @@ public class LibrarianView extends View {
     }
 
     public LibrarianView(BookView bookView){
+        isbnField.setId("isbnField");
+        countField.setId("countField");
+        sellBtn.setId("sellBtn");
+        amountLabel.setId("libAmountLabel");
         setFormPane();
         new LibrarianController(this, bookView);
     }

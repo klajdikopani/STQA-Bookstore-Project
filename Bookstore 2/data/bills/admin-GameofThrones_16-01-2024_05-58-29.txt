@@ -1,0 +1,6 @@
+User: admin
+Book Title: Game of Thrones
+Copies Sold: 5
+Amount: 350.0$
+Profit: 150.0$
+Time of Transaction: 16-01-2024 05:58:29
